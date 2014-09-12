@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4618420E-71D1-4624-AF25-FCCEBADDFF82</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OutOfThisWorl</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5D2DBD06-77FA-4C2A-8382-126E292667CB</key>
+		<string>https://github.com/Khangoora/TestProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OutOfThisWorl.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5D2DBD06-77FA-4C2A-8382-126E292667CB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Khangoora/TestProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5D2DBD06-77FA-4C2A-8382-126E292667CB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5D2DBD06-77FA-4C2A-8382-126E292667CB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OutOfThisWorl</string>
+		</dict>
+	</array>
+</dict>
+</plist>

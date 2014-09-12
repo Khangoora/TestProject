@@ -9,7 +9,7 @@
 #import "JSKOuterSpaceTableViewController.h"
 #import "AstronomicalData.h"
 #import "JSKSpaceObject.h"
-
+#import "JSKSpaceImageViewController.h"
 
 @interface JSKOuterSpaceTableViewController ()
 
@@ -60,6 +60,19 @@
 }
 
 #pragma mark - Table view data source
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        if ([segue.destinationViewController isKindOfClass:[JSKSpaceImageViewController class]]) {
+            JSKSpaceImageViewController *nextViewController = segue.destinationViewController;
+           //index into our array of objects
+            NSIndexPath *path = [self.tableView indexPathForCell:sender];
+            JSKSpaceObject *selectedObject = self.planets[path.row];
+            nextViewController.spaceObject = selectedObject;
+        }
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

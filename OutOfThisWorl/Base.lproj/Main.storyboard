@@ -53,9 +53,27 @@
             <point key="canvasLocation" x="633" y="69"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="sFN-PY-Dnv">
+            <objects>
+                <viewController id="G1t-B6-ZMi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T5z-dt-DYF"/>
+                        <viewControllerLayoutGuide type="bottom" id="EkD-05-B8R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hJi-Ss-drD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUY-ZU-QMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1104" y="346"/>
+        </scene>
+        <!--Space Image View Controller-->
         <scene sceneID="XmP-9e-3mK">
             <objects>
-                <viewController id="78R-Xi-DfX" sceneMemberID="viewController">
+                <viewController id="78R-Xi-DfX" customClass="JSKSpaceImageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5FM-eJ-Nj7"/>
                         <viewControllerLayoutGuide type="bottom" id="oms-iH-YeK"/>
@@ -63,13 +81,22 @@
                     <view key="view" contentMode="scaleToFill" id="aJS-b3-W14">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hb1-xV-bGV">
+                                <rect key="frame" x="0.0" y="61" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="R8m-SX-dMr"/>
+                    <connections>
+                        <outlet property="scrollView" destination="hb1-xV-bGV" id="bDA-CP-5tN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1A-hg-id5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="69"/>
+            <point key="canvasLocation" x="1108" y="-333"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dpT-RV-Ju6">
