@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EAA639D19C2917600D2ECB9 /* JSKSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA639C19C2917600D2ECB9 /* JSKSpaceImageViewController.m */; };
 		7EC6A69819C0030700E5E603 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC6A69719C0030700E5E603 /* Foundation.framework */; };
 		7EC6A69A19C0030700E5E603 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC6A69919C0030700E5E603 /* CoreGraphics.framework */; };
 		7EC6A69C19C0030700E5E603 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC6A69B19C0030700E5E603 /* UIKit.framework */; };
@@ -14,13 +15,25 @@
 		7EC6A6A419C0030700E5E603 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC6A6A319C0030700E5E603 /* main.m */; };
 		7EC6A6A819C0030700E5E603 /* JSKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC6A6A719C0030700E5E603 /* JSKAppDelegate.m */; };
 		7EC6A6AB19C0030700E5E603 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A6A919C0030700E5E603 /* Main.storyboard */; };
-		7EC6A6AE19C0030700E5E603 /* JSKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC6A6AD19C0030700E5E603 /* JSKViewController.m */; };
 		7EC6A6B019C0030700E5E603 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A6AF19C0030700E5E603 /* Images.xcassets */; };
 		7EC6A6B719C0030800E5E603 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC6A6B619C0030800E5E603 /* XCTest.framework */; };
 		7EC6A6B819C0030800E5E603 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC6A69719C0030700E5E603 /* Foundation.framework */; };
 		7EC6A6B919C0030800E5E603 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC6A69B19C0030700E5E603 /* UIKit.framework */; };
 		7EC6A6C119C0030800E5E603 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A6BF19C0030800E5E603 /* InfoPlist.strings */; };
 		7EC6A6C319C0030800E5E603 /* OutOfThisWorlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC6A6C219C0030800E5E603 /* OutOfThisWorlTests.m */; };
+		7EC6A6CE19C0043100E5E603 /* JSKOuterSpaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC6A6CD19C0043100E5E603 /* JSKOuterSpaceTableViewController.m */; };
+		7EC6A6D119C0E8C500E5E603 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC6A6D019C0E8C500E5E603 /* AstronomicalData.m */; };
+		7EC6A72019C1217900E5E603 /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A71619C1217900E5E603 /* Earth.jpg */; };
+		7EC6A72119C1217900E5E603 /* EinsteinRing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A71719C1217900E5E603 /* EinsteinRing.jpg */; };
+		7EC6A72219C1217900E5E603 /* Jupiter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A71819C1217900E5E603 /* Jupiter.jpg */; };
+		7EC6A72319C1217900E5E603 /* Mars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A71919C1217900E5E603 /* Mars.jpg */; };
+		7EC6A72419C1217900E5E603 /* Mercury.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A71A19C1217900E5E603 /* Mercury.jpg */; };
+		7EC6A72519C1217900E5E603 /* Neptune.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A71B19C1217900E5E603 /* Neptune.jpg */; };
+		7EC6A72619C1217900E5E603 /* Orion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A71C19C1217900E5E603 /* Orion.jpg */; };
+		7EC6A72719C1217900E5E603 /* Saturn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A71D19C1217900E5E603 /* Saturn.jpg */; };
+		7EC6A72819C1217900E5E603 /* Uranus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A71E19C1217900E5E603 /* Uranus.jpg */; };
+		7EC6A72919C1217900E5E603 /* Venus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EC6A71F19C1217900E5E603 /* Venus.jpg */; };
+		7EC6A72C19C121D500E5E603 /* JSKSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC6A72B19C121D500E5E603 /* JSKSpaceObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7EAA639B19C2917600D2ECB9 /* JSKSpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSKSpaceImageViewController.h; sourceTree = "<group>"; };
+		7EAA639C19C2917600D2ECB9 /* JSKSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSKSpaceImageViewController.m; sourceTree = "<group>"; };
 		7EC6A69419C0030700E5E603 /* OutOfThisWorl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutOfThisWorl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC6A69719C0030700E5E603 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7EC6A69919C0030700E5E603 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +60,28 @@
 		7EC6A6A619C0030700E5E603 /* JSKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSKAppDelegate.h; sourceTree = "<group>"; };
 		7EC6A6A719C0030700E5E603 /* JSKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSKAppDelegate.m; sourceTree = "<group>"; };
 		7EC6A6AA19C0030700E5E603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7EC6A6AC19C0030700E5E603 /* JSKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSKViewController.h; sourceTree = "<group>"; };
-		7EC6A6AD19C0030700E5E603 /* JSKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSKViewController.m; sourceTree = "<group>"; };
 		7EC6A6AF19C0030700E5E603 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7EC6A6B519C0030800E5E603 /* OutOfThisWorlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutOfThisWorlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC6A6B619C0030800E5E603 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7EC6A6BE19C0030800E5E603 /* OutOfThisWorlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OutOfThisWorlTests-Info.plist"; sourceTree = "<group>"; };
 		7EC6A6C019C0030800E5E603 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7EC6A6C219C0030800E5E603 /* OutOfThisWorlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OutOfThisWorlTests.m; sourceTree = "<group>"; };
+		7EC6A6CC19C0043100E5E603 /* JSKOuterSpaceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSKOuterSpaceTableViewController.h; path = ../JSKOuterSpaceTableViewController.h; sourceTree = "<group>"; };
+		7EC6A6CD19C0043100E5E603 /* JSKOuterSpaceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSKOuterSpaceTableViewController.m; path = ../JSKOuterSpaceTableViewController.m; sourceTree = "<group>"; };
+		7EC6A6CF19C0E8C500E5E603 /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalData.h; sourceTree = "<group>"; };
+		7EC6A6D019C0E8C500E5E603 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
+		7EC6A71619C1217900E5E603 /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth.jpg; sourceTree = "<group>"; };
+		7EC6A71719C1217900E5E603 /* EinsteinRing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EinsteinRing.jpg; sourceTree = "<group>"; };
+		7EC6A71819C1217900E5E603 /* Jupiter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jupiter.jpg; sourceTree = "<group>"; };
+		7EC6A71919C1217900E5E603 /* Mars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mars.jpg; sourceTree = "<group>"; };
+		7EC6A71A19C1217900E5E603 /* Mercury.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mercury.jpg; sourceTree = "<group>"; };
+		7EC6A71B19C1217900E5E603 /* Neptune.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Neptune.jpg; sourceTree = "<group>"; };
+		7EC6A71C19C1217900E5E603 /* Orion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Orion.jpg; sourceTree = "<group>"; };
+		7EC6A71D19C1217900E5E603 /* Saturn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Saturn.jpg; sourceTree = "<group>"; };
+		7EC6A71E19C1217900E5E603 /* Uranus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uranus.jpg; sourceTree = "<group>"; };
+		7EC6A71F19C1217900E5E603 /* Venus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Venus.jpg; sourceTree = "<group>"; };
+		7EC6A72A19C121D500E5E603 /* JSKSpaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSKSpaceObject.h; sourceTree = "<group>"; };
+		7EC6A72B19C121D500E5E603 /* JSKSpaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSKSpaceObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +144,12 @@
 				7EC6A6A619C0030700E5E603 /* JSKAppDelegate.h */,
 				7EC6A6A719C0030700E5E603 /* JSKAppDelegate.m */,
 				7EC6A6A919C0030700E5E603 /* Main.storyboard */,
-				7EC6A6AC19C0030700E5E603 /* JSKViewController.h */,
-				7EC6A6AD19C0030700E5E603 /* JSKViewController.m */,
+				7EAA639B19C2917600D2ECB9 /* JSKSpaceImageViewController.h */,
+				7EAA639C19C2917600D2ECB9 /* JSKSpaceImageViewController.m */,
+				7EC6A6CC19C0043100E5E603 /* JSKOuterSpaceTableViewController.h */,
+				7EC6A6CD19C0043100E5E603 /* JSKOuterSpaceTableViewController.m */,
+				7EC6A72A19C121D500E5E603 /* JSKSpaceObject.h */,
+				7EC6A72B19C121D500E5E603 /* JSKSpaceObject.m */,
 				7EC6A6AF19C0030700E5E603 /* Images.xcassets */,
 				7EC6A69E19C0030700E5E603 /* Supporting Files */,
 			);
@@ -126,6 +159,18 @@
 		7EC6A69E19C0030700E5E603 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7EC6A71619C1217900E5E603 /* Earth.jpg */,
+				7EC6A71719C1217900E5E603 /* EinsteinRing.jpg */,
+				7EC6A71819C1217900E5E603 /* Jupiter.jpg */,
+				7EC6A71919C1217900E5E603 /* Mars.jpg */,
+				7EC6A71A19C1217900E5E603 /* Mercury.jpg */,
+				7EC6A71B19C1217900E5E603 /* Neptune.jpg */,
+				7EC6A71C19C1217900E5E603 /* Orion.jpg */,
+				7EC6A71D19C1217900E5E603 /* Saturn.jpg */,
+				7EC6A71E19C1217900E5E603 /* Uranus.jpg */,
+				7EC6A71F19C1217900E5E603 /* Venus.jpg */,
+				7EC6A6CF19C0E8C500E5E603 /* AstronomicalData.h */,
+				7EC6A6D019C0E8C500E5E603 /* AstronomicalData.m */,
 				7EC6A69F19C0030700E5E603 /* OutOfThisWorl-Info.plist */,
 				7EC6A6A019C0030700E5E603 /* InfoPlist.strings */,
 				7EC6A6A319C0030700E5E603 /* main.m */,
@@ -229,9 +274,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC6A72019C1217900E5E603 /* Earth.jpg in Resources */,
+				7EC6A72919C1217900E5E603 /* Venus.jpg in Resources */,
+				7EC6A72419C1217900E5E603 /* Mercury.jpg in Resources */,
+				7EC6A72719C1217900E5E603 /* Saturn.jpg in Resources */,
+				7EC6A72819C1217900E5E603 /* Uranus.jpg in Resources */,
 				7EC6A6B019C0030700E5E603 /* Images.xcassets in Resources */,
+				7EC6A72519C1217900E5E603 /* Neptune.jpg in Resources */,
+				7EC6A72319C1217900E5E603 /* Mars.jpg in Resources */,
 				7EC6A6A219C0030700E5E603 /* InfoPlist.strings in Resources */,
 				7EC6A6AB19C0030700E5E603 /* Main.storyboard in Resources */,
+				7EC6A72119C1217900E5E603 /* EinsteinRing.jpg in Resources */,
+				7EC6A72219C1217900E5E603 /* Jupiter.jpg in Resources */,
+				7EC6A72619C1217900E5E603 /* Orion.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +305,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EAA639D19C2917600D2ECB9 /* JSKSpaceImageViewController.m in Sources */,
+				7EC6A6CE19C0043100E5E603 /* JSKOuterSpaceTableViewController.m in Sources */,
+				7EC6A72C19C121D500E5E603 /* JSKSpaceObject.m in Sources */,
 				7EC6A6A419C0030700E5E603 /* main.m in Sources */,
-				7EC6A6AE19C0030700E5E603 /* JSKViewController.m in Sources */,
 				7EC6A6A819C0030700E5E603 /* JSKAppDelegate.m in Sources */,
+				7EC6A6D119C0E8C500E5E603 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +515,7 @@
 				7EC6A6C819C0030800E5E603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EC6A6C919C0030800E5E603 /* Build configuration list for PBXNativeTarget "OutOfThisWorlTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +524,7 @@
 				7EC6A6CB19C0030800E5E603 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
