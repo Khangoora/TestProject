@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSKSpaceObject.h"
 
-@interface JSKSpaceDataViewController : UIViewController
+@interface JSKSpaceDataViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+@property(strong,nonatomic) JSKSpaceObject *spaceObject;
 @end
