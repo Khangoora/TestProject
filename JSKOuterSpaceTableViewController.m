@@ -18,6 +18,26 @@
 
 @implementation JSKOuterSpaceTableViewController
 
+#define ADDED_SPACE_OBJECTS_KEY @"Added Space Objects Array"
+
+#pragma mark - Lazy Instantiation of Properties
+
+-(NSMutableArray *)planets
+{
+    if (!_planets) {
+        _planets = [[NSMutableArray alloc]init];
+    }
+    return _planets;
+}
+
+-(NSMutableArray *)addedSpaceObjects
+{
+    if (!_addedSpaceObjects) {
+        _addedSpaceObjects = [[NSMutableArray alloc]init];
+    }
+    return _addedSpaceObjects;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -39,18 +59,17 @@
     
     
     
-    self.planets = [[NSMutableArray alloc ]init];
-
     for(NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets])
     {
         NSString *imageName = [NSString stringWithFormat:@"%@.jpg",planetData[PLANET_NAME]];
         JSKSpaceObject *planet = [[JSKSpaceObject alloc]initWithData:planetData andimage:[UIImage imageNamed:imageName]];
         [self.planets addObject:planet];
     }
-    
-    
-
-
+    NSArray *myPlanetsAsPropertyLists = [[NSUserDefaults standardUserDefaults] arrayForKey:ADDED_SPACE_OBJECTS_KEY];
+    for (NSDictionary *dictionary in myPlanetsAsPropertyLists) {
+        JSKSpaceObject *spaceObject = [self spaceObjectForDictionary:dictionary];
+        [self.addedSpaceObjects addObject:spaceObject];
+    }
     
 }
 
@@ -58,6 +77,50 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Delegate Methods
+
+-(void)didCancel
+{
+    NSLog(@"Did Cancel");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)addSpaceObject:(JSKSpaceObject *)spaceObject{
+    
+    [self.addedSpaceObjects addObject:spaceObject];
+    
+    NSMutableArray *spaceObjectsAsPropertyLists = [[[NSUserDefaults standardUserDefaults] arrayForKey:ADDED_SPACE_OBJECTS_KEY] mutableCopy];
+    if(!spaceObjectsAsPropertyLists) spaceObjectsAsPropertyLists = [[NSMutableArray alloc] init];
+    
+    [spaceObjectsAsPropertyLists addObject:[self spaceObjectAsPropertyList:spaceObject]];
+
+    [[NSUserDefaults standardUserDefaults] setObject:spaceObjectsAsPropertyLists forKey:ADDED_SPACE_OBJECTS_KEY];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.tableView reloadData];
+}
+
+
+#pragma mark -Helper Methods
+-(NSDictionary *)spaceObjectAsPropertyList:(JSKSpaceObject *)spaceObject
+{
+    NSData *imageData = UIImagePNGRepresentation(spaceObject.spaceImage);
+    NSDictionary *dictionary = @{PLANET_NAME : spaceObject.name, PLANET_GRAVITY : @(spaceObject.gravitaionalForce), PLANET_DIAMETER : @(spaceObject.diameter), PLANET_YEAR_LENGTH : @(spaceObject.yearLength), PLANET_DAY_LENGTH : @(spaceObject.dayLength), PLANET_TEMPERATURE : @(spaceObject.temperature) , PLANET_NUMBER_OF_MOONS : @(spaceObject.numberOfMoons), PLANET_NICKNAME : spaceObject.nickName, PLANET_INTERESTING_FACT : spaceObject.interest, PLANET_IMAGE : imageData };
+   
+    return dictionary;
+}
+
+-(JSKSpaceObject *)spaceObjectForDictionary:(NSDictionary *)dictionary
+{
+    NSData *dataForImage = dictionary[PLANET_IMAGE];
+    UIImage *spaceImage = [UIImage imageWithData:dataForImage];
+    JSKSpaceObject *spaceObject = [[JSKSpaceObject alloc] initWithData:dictionary andimage:spaceImage];
+    return spaceObject;
+    
 }
 
 #pragma mark - Table view data source
@@ -69,7 +132,14 @@
             JSKSpaceImageViewController *nextViewController = segue.destinationViewController;
            //index into our array of objects
             NSIndexPath *path = [self.tableView indexPathForCell:sender];
-            JSKSpaceObject *selectedObject = self.planets[path.row];
+            JSKSpaceObject *selectedObject;
+            if (path.section ==0) {
+                selectedObject = self.planets[path.row];
+            }
+            else if (path.section == 1)
+            {
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
             nextViewController.spaceObject = selectedObject;
         }
     }
@@ -77,9 +147,21 @@
         if ([segue.destinationViewController isKindOfClass:[JSKSpaceDataViewController class]] ) {
             JSKSpaceDataViewController *nextViewController = segue.destinationViewController;
             NSIndexPath *path = sender;
-            JSKSpaceObject *selectedObject = self.planets[path.row];
+            JSKSpaceObject *selectedObject;
+            if (path.section == 0) {
+                selectedObject = self.planets[path.row];
+            }
+            else if (path.section == 1)
+            {
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
+            
             nextViewController.spaceObject = selectedObject;
         }
+    }
+    if ([segue.destinationViewController isKindOfClass:[JSKAddObjectViewController class]]) {
+        JSKAddObjectViewController *addSpaceObjectVC = segue.destinationViewController;
+        addSpaceObjectVC.delegate = self;
     }
 }
 
@@ -87,16 +169,29 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-
-    return 1;
+    if ([self.addedSpaceObjects count]) {
+        return 2;
+    }
+    else{
+        NSLog(@"%i sections 1",[self.addedSpaceObjects count]);
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    NSLog(@"%i",[self.planets count]);
-    return [self.planets count];
+    if (section == 1) {
+        NSLog(@"%i if statement",[self.addedSpaceObjects count]);
+
+        return [self.addedSpaceObjects count];
+    }
+    else{
+        NSLog(@"%i esle statment",[self.addedSpaceObjects count]);
+
+        return [self.planets count];
+    }
     
 }
 
@@ -105,13 +200,24 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath:indexPath];
-    
+
     // Configure the cell...
-    JSKSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
-    cell.textLabel.text = planet.name;
-    cell.imageView.image = planet.spaceImage;
-    cell.detailTextLabel.text = planet.nickName;
-    
+    if (indexPath.section == 1) {
+        //customize cell with new space object
+        JSKSpaceObject *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickName;
+        cell.imageView.image = planet.spaceImage;
+        
+    }
+    else{
+        //get JSKSpaceObject from planets array and update cell properties.
+        JSKSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.imageView.image = planet.spaceImage;
+        cell.detailTextLabel.text = planet.nickName;
+    }
+    //appearance of cell
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.textColor = [UIColor colorWithWhite:.5 alpha:1];

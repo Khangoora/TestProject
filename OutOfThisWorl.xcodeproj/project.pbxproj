@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E9C972519C59B940098A6AB /* JSKAddObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9C972419C59B940098A6AB /* JSKAddObjectViewController.m */; };
 		7E9FAC1519C3A5A5004CD17D /* JSKSpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9FAC1419C3A5A5004CD17D /* JSKSpaceDataViewController.m */; };
 		7EAA639D19C2917600D2ECB9 /* JSKSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA639C19C2917600D2ECB9 /* JSKSpaceImageViewController.m */; };
 		7EC6A69819C0030700E5E603 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC6A69719C0030700E5E603 /* Foundation.framework */; };
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E9C972319C59B940098A6AB /* JSKAddObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSKAddObjectViewController.h; path = ../JSKAddObjectViewController.h; sourceTree = "<group>"; };
+		7E9C972419C59B940098A6AB /* JSKAddObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSKAddObjectViewController.m; path = ../JSKAddObjectViewController.m; sourceTree = "<group>"; };
 		7E9FAC1319C3A5A5004CD17D /* JSKSpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSKSpaceDataViewController.h; sourceTree = "<group>"; };
 		7E9FAC1419C3A5A5004CD17D /* JSKSpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSKSpaceDataViewController.m; sourceTree = "<group>"; };
 		7EAA639B19C2917600D2ECB9 /* JSKSpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSKSpaceImageViewController.h; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				7EC6A6A619C0030700E5E603 /* JSKAppDelegate.h */,
 				7EC6A6A719C0030700E5E603 /* JSKAppDelegate.m */,
 				7EC6A6A919C0030700E5E603 /* Main.storyboard */,
+				7E9C972319C59B940098A6AB /* JSKAddObjectViewController.h */,
+				7E9C972419C59B940098A6AB /* JSKAddObjectViewController.m */,
 				7E9FAC1319C3A5A5004CD17D /* JSKSpaceDataViewController.h */,
 				7E9FAC1419C3A5A5004CD17D /* JSKSpaceDataViewController.m */,
 				7EAA639B19C2917600D2ECB9 /* JSKSpaceImageViewController.h */,
@@ -316,6 +321,7 @@
 				7EC6A6A419C0030700E5E603 /* main.m in Sources */,
 				7EC6A6A819C0030700E5E603 /* JSKAppDelegate.m in Sources */,
 				7EC6A6D119C0E8C500E5E603 /* AstronomicalData.m in Sources */,
+				7E9C972519C59B940098A6AB /* JSKAddObjectViewController.m in Sources */,
 				7E9FAC1519C3A5A5004CD17D /* JSKSpaceDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
